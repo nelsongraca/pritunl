@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv sh
+
+pritunl set-mongodb mongodb://${MONGODB_SERVER:-"localhost"}:27017/pritunl
+

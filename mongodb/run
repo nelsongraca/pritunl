@@ -1,0 +1,2 @@
+#!/usr/bin/execlineb -P
+mongod --bind_ip 0.0.0.0
