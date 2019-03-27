@@ -22,7 +22,7 @@ go get github.com/pritunl/pritunl-web
 cp /go/bin/* /usr/bin/
 rm -rf ${GOPATH}
 
-PRITUNL_VERSION="1.29.1994.1"
+PRITUNL_VERSION="1.29.2010.18"
 
 wget https://github.com/pritunl/pritunl/archive/${PRITUNL_VERSION}.tar.gz
 tar zxvf ${PRITUNL_VERSION}.tar.gz
