@@ -10,7 +10,8 @@ apk del --purge curl
 rm -rf /var/cache/apk/* /tmp/*
 
 # Build deps
-apk  add --no-cache --update go git bzr wget py2-pip  gcc python python-dev musl-dev linux-headers libffi-dev openssl-dev  py-setuptools openssl procps ca-certificates openvpn
+apk add -q --no-cache --virtual .build-deps bzr curl gcc git go libffi-dev linux-headers make musl-dev openssl-dev python-dev py-pip wget
+apk add -q --no-cache bash ca-certificates iptables ip6tables openssl openvpn procps py-setuptools py-dnspython tzdata
 
 pip install --upgrade pip
 
@@ -41,8 +42,7 @@ sed -i -e '/countryName_max/a countryName_value\t\t= US' /etc/ssl/openssl.cnf
 apk add --no-cache mongodb
 
 #cleanup
-apk del --purge go git bzr gcc python-dev musl-dev linux-headers libffi-dev openssl-dev py-setuptools
-
+apk del -q --purge .build-deps
 
 
 
