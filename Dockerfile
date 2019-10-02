@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.10
 
 ADD setup.sh /setup.sh
 RUN chmod +x /setup.sh && /setup.sh

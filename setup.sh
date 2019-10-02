@@ -18,7 +18,7 @@ pip install --upgrade pip
 # Pritunl Install
 export GOPATH=/go
 go get github.com/pritunl/pritunl-dns
-go get github.com/pritunl/pritunl-monitor
+#go get github.com/pritunl/pritunl-monitor
 go get github.com/pritunl/pritunl-web
 cp /go/bin/* /usr/bin/
 rm -rf ${GOPATH}
